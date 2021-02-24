@@ -105,6 +105,11 @@ function BioCard() {
                 </a>
               </div>
             </div>
+            <a href="https://drive.google.com/file/d/15lawid2SrkHR3eQ-3izo2ieaxLUP50lR/view?usp=sharing">
+              <button className="flex mx-auto mt-8 text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
+                View my Resume!
+              </button>
+            </a>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
