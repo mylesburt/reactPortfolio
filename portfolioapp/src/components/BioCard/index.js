@@ -3,7 +3,7 @@ import profilePic from "../assets/portfolio_image.jpg";
 
 function BioCard() {
   return (
-    <section className="bg-gray-800 text-white body-font">
+    <section className="bg-gray-900 text-white body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-5xl text-5xl mb-4 font-medium text-white">
