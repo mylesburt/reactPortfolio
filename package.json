@@ -51,6 +51,5 @@
     "eslint-plugin-testing-library": "3.10.1",
     "prettier": "2.2.1",
     "concurrently": "^4.1.2",
-    "nodemon": "^1.19.4"
   }
 }
