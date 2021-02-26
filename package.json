@@ -14,8 +14,7 @@
     "portfolioapp": "cd portfolioapp && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd portfolioapp && npm install",
-    "build": "cd portfolioapp && npm run build",
-    "heroku-postbuild": "npm run build"
+    "build": "cd portfolioapp && npm run build"
   },
   "author": "",
   "license": "ISC",
