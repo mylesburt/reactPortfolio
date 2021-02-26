@@ -7,9 +7,10 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log(`Server is running on Port: ${PORT}`));
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("portfolioapp/build"));
+  app.use(express.static("portfolioapp/build/index.html"));
 }
 
 app.use(express.json());
