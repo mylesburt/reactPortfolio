@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const routes = require("./routes");
+const path = require("path");
 
 dotenv.config();
 
@@ -14,12 +15,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("portfolioapp/build"));
-  const path = require("path");
-  app.get(`*`, (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, "portfolioapp", "build", "index.html")
-    );
+  app.use(express.static(path.join(__dirname, "./portfolioapp/build")));
+  app.get(`*`, (_, res) => {
+    res.sendFile(path.join(__dirname, "./portfolioapp/build/index.html"));
   });
 }
 
