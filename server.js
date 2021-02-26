@@ -8,14 +8,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`Server is running on Port: ${PORT}`));
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("portfolioapp/build/index.html"));
-}
-
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("portfolioapp/build"));
+}
 
 mongoose.connect(
   process.env.MONGODB_URI,
@@ -28,3 +27,5 @@ mongoose.connect(
     console.log("Connected to MongoDB!");
   }
 );
+
+app.listen(PORT, () => console.log(`Server is running on Port: ${PORT}`));
